@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3375467640613195059}
   - component: {fileID: 6678849323538800988}
   - component: {fileID: 3700345252144442859}
-  - component: {fileID: 1216832715371607081}
+  - component: {fileID: -4361814278947698690}
+  - component: {fileID: -5556841111005716641}
   m_Layer: 0
   m_Name: Cube_Type1
   m_TagString: Untagged
@@ -90,7 +91,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1216832715371607081
+--- !u!114 &-4361814278947698690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580373311032521466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81d7778276836e4aab00690b6c84dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_CubeStateScript
+  resetTime: 3
+  state1: {fileID: 2100000, guid: 927f56d260e80d948980bf5f156b5e9e, type: 2}
+  state2: {fileID: 2100000, guid: c6843009319dfc643b738c08f0ad2813, type: 2}
+  state3: {fileID: 2100000, guid: 29858762c29550f48a45964c074048a2, type: 2}
+--- !u!65 &-5556841111005716641
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
