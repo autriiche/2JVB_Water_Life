@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6678849323538800988}
   - component: {fileID: 3700345252144442859}
   - component: {fileID: 1216832715371607081}
+  - component: {fileID: -2822607997631020051}
+  - component: {fileID: 8042196391672781721}
   m_Layer: 0
   m_Name: Cube_Type1
   m_TagString: Untagged
@@ -111,3 +113,45 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2822607997631020051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580373311032521466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81d7778276836e4aab00690b6c84dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_CubeStateScript
+  resetTime: 0
+  posX: 0
+  posY: 0
+  state: 2
+--- !u!114 &8042196391672781721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580373311032521466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4ebd66b5fed384b9456a819dd33e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_StateChanger
+  cube_downleft: {fileID: 0}
+  cube_down: {fileID: 0}
+  cube_downright: {fileID: 0}
+  cube_left: {fileID: 0}
+  cube_right: {fileID: 0}
+  cube_topleft: {fileID: 0}
+  cube_top: {fileID: 0}
+  cube_topright: {fileID: 0}
+  mState_0: {fileID: 2100000, guid: e8405ab25f345aa4ab13f4f12c2d1e97, type: 2}
+  mState_1: {fileID: 2100000, guid: c7a7ae265c1307e4ea527905178c0131, type: 2}
+  mState_2: {fileID: 2100000, guid: cd343c7922254774ea5df4db45186c3f, type: 2}
+  mState_3: {fileID: 2100000, guid: cee6ef68c69fcc146a8abd3f13d52782, type: 2}
+  mState_4: {fileID: 2100000, guid: 29858762c29550f48a45964c074048a2, type: 2}
+  StateScript: {fileID: -2822607997631020051}

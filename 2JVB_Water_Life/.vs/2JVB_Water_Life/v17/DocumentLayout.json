@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC2501AA-DD4D-874F-1D98-30A3B72F5EE5}|Assembly-CSharp.csproj|c:\\users\\flocr\\onedrive\\documents\\github\\2jvb_water_life\\2jvb_water_life\\assets\\scripts\\s_statechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC2501AA-DD4D-874F-1D98-30A3B72F5EE5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\s_statechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC2501AA-DD4D-874F-1D98-30A3B72F5EE5}|Assembly-CSharp.csproj|C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\assets\\scripts\\s_cubestatescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC2501AA-DD4D-874F-1D98-30A3B72F5EE5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\s_cubestatescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "S_StateChanger.cs",
+              "DocumentMoniker": "C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\Assets\\Scripts\\S_StateChanger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\S_StateChanger.cs",
+              "ToolTip": "C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\Assets\\Scripts\\S_StateChanger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\S_StateChanger.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAkwOwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T15:47:19.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "S_CubeStateScript.cs",
+              "DocumentMoniker": "C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\Assets\\Scripts\\S_CubeStateScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\S_CubeStateScript.cs",
+              "ToolTip": "C:\\Users\\flocr\\OneDrive\\Documents\\GitHub\\2JVB_Water_Life\\2JVB_Water_Life\\Assets\\Scripts\\S_CubeStateScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\S_CubeStateScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T15:47:16.847Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
