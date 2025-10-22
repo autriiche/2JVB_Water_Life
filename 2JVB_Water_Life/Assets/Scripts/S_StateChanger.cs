@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static UnityEngine.Random;
 
-public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
+public class S_StateChanger : MonoBehaviour //, IPointerDownHandler
 {
     private Camera _mainCamera;
     public GameObject cube_downleft;
@@ -25,6 +25,8 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
     private int state;
     private InputAction leftMouseClick;
     private bool waterDistrib;
+    private static int water = 50; // stock d’eau total partagé par tous les cubes
+
 
     //public void OnPointerDown(PointerEventData eventData)
     //{
@@ -51,6 +53,7 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
         {
             state--;
         }
+
         //Debug.Log(name + state);
         if (state <= 0)
         {
@@ -60,7 +63,6 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
 
         else if (state == 1)
         {
-
             GetComponent<MeshRenderer>().material = mState_1;
         }
 
@@ -86,42 +88,55 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
         {
             if (cube_downleft.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_downleft.GetComponent<S_StateChanger>().StateChanger(cube_downleft.GetComponent<S_StateChanger>().state--, cube_downleft.GetComponent<S_StateChanger>().waterDistrib);
+                cube_downleft.GetComponent<S_StateChanger>().StateChanger(
+                    cube_downleft.GetComponent<S_StateChanger>().state--,
+                    cube_downleft.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_down.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_down.GetComponent<S_StateChanger>().StateChanger(cube_down.GetComponent<S_StateChanger>().state--, cube_down.GetComponent<S_StateChanger>().waterDistrib);
+                cube_down.GetComponent<S_StateChanger>().StateChanger(cube_down.GetComponent<S_StateChanger>().state--,
+                    cube_down.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_downright.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_downright.GetComponent<S_StateChanger>().StateChanger(cube_downright.GetComponent<S_StateChanger>().state--, cube_downright.GetComponent<S_StateChanger>().waterDistrib);
+                cube_downright.GetComponent<S_StateChanger>().StateChanger(
+                    cube_downright.GetComponent<S_StateChanger>().state--,
+                    cube_downright.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_left.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_left.GetComponent<S_StateChanger>().StateChanger(cube_left.GetComponent<S_StateChanger>().state--, cube_left.GetComponent<S_StateChanger>().waterDistrib);
+                cube_left.GetComponent<S_StateChanger>().StateChanger(cube_left.GetComponent<S_StateChanger>().state--,
+                    cube_left.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_right.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_right.GetComponent<S_StateChanger>().StateChanger(cube_right.GetComponent<S_StateChanger>().state--, cube_right.GetComponent<S_StateChanger>().waterDistrib);
+                cube_right.GetComponent<S_StateChanger>().StateChanger(
+                    cube_right.GetComponent<S_StateChanger>().state--,
+                    cube_right.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_topleft.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_topleft.GetComponent<S_StateChanger>().StateChanger(cube_topleft.GetComponent<S_StateChanger>().state--, cube_topleft.GetComponent<S_StateChanger>().waterDistrib);
+                cube_topleft.GetComponent<S_StateChanger>().StateChanger(
+                    cube_topleft.GetComponent<S_StateChanger>().state--,
+                    cube_topleft.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_top.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_top.GetComponent<S_StateChanger>().StateChanger(cube_top.GetComponent<S_StateChanger>().state--, cube_top.GetComponent<S_StateChanger>().waterDistrib);
+                cube_top.GetComponent<S_StateChanger>().StateChanger(cube_top.GetComponent<S_StateChanger>().state--,
+                    cube_top.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_topright.GetComponent<S_StateChanger>().state > 0)
             {
-                cube_topright.GetComponent<S_StateChanger>().StateChanger(cube_topright.GetComponent<S_StateChanger>().state--, cube_topright.GetComponent<S_StateChanger>().waterDistrib);
+                cube_topright.GetComponent<S_StateChanger>().StateChanger(
+                    cube_topright.GetComponent<S_StateChanger>().state--,
+                    cube_topright.GetComponent<S_StateChanger>().waterDistrib);
             }
         }
 
@@ -129,45 +144,59 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
         {
             if (cube_downleft.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_downleft.GetComponent<S_StateChanger>().StateChanger(cube_downleft.GetComponent<S_StateChanger>().state++, cube_downleft.GetComponent<S_StateChanger>().waterDistrib);
+                cube_downleft.GetComponent<S_StateChanger>().StateChanger(
+                    cube_downleft.GetComponent<S_StateChanger>().state++,
+                    cube_downleft.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_down.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_down.GetComponent<S_StateChanger>().StateChanger(cube_down.GetComponent<S_StateChanger>().state++, cube_down.GetComponent<S_StateChanger>().waterDistrib);
+                cube_down.GetComponent<S_StateChanger>().StateChanger(cube_down.GetComponent<S_StateChanger>().state++,
+                    cube_down.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_downright.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_downright.GetComponent<S_StateChanger>().StateChanger(cube_downright.GetComponent<S_StateChanger>().state++, cube_downright.GetComponent<S_StateChanger>().waterDistrib);
+                cube_downright.GetComponent<S_StateChanger>().StateChanger(
+                    cube_downright.GetComponent<S_StateChanger>().state++,
+                    cube_downright.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_left.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_left.GetComponent<S_StateChanger>().StateChanger(cube_left.GetComponent<S_StateChanger>().state++, cube_left.GetComponent<S_StateChanger>().waterDistrib);
+                cube_left.GetComponent<S_StateChanger>().StateChanger(cube_left.GetComponent<S_StateChanger>().state++,
+                    cube_left.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_right.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_right.GetComponent<S_StateChanger>().StateChanger(cube_right.GetComponent<S_StateChanger>().state++, cube_right.GetComponent<S_StateChanger>().waterDistrib);
+                cube_right.GetComponent<S_StateChanger>().StateChanger(
+                    cube_right.GetComponent<S_StateChanger>().state++,
+                    cube_right.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_topleft.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_topleft.GetComponent<S_StateChanger>().StateChanger(cube_topleft.GetComponent<S_StateChanger>().state++, cube_topleft.GetComponent<S_StateChanger>().waterDistrib);
+                cube_topleft.GetComponent<S_StateChanger>().StateChanger(
+                    cube_topleft.GetComponent<S_StateChanger>().state++,
+                    cube_topleft.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_top.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_top.GetComponent<S_StateChanger>().StateChanger(cube_top.GetComponent<S_StateChanger>().state++, cube_top.GetComponent<S_StateChanger>().waterDistrib);
+                cube_top.GetComponent<S_StateChanger>().StateChanger(cube_top.GetComponent<S_StateChanger>().state++,
+                    cube_top.GetComponent<S_StateChanger>().waterDistrib);
             }
 
             if (cube_topright.GetComponent<S_StateChanger>().state < 4)
             {
-                cube_topright.GetComponent<S_StateChanger>().StateChanger(cube_topright.GetComponent<S_StateChanger>().state++, cube_topright.GetComponent<S_StateChanger>().waterDistrib);
+                cube_topright.GetComponent<S_StateChanger>().StateChanger(
+                    cube_topright.GetComponent<S_StateChanger>().state++,
+                    cube_topright.GetComponent<S_StateChanger>().waterDistrib);
             }
         }
     }
+
     void Start()
     {
         _mainCamera = Camera.main;
@@ -203,67 +232,84 @@ public class S_StateChanger : MonoBehaviour//, IPointerDownHandler
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //Debug.Log(cube_downleft.GetComponent<S_StateChanger>().state);
             Ray ray = _mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.position == transform.position && state > 0)
+                if (hit.transform.position == transform.position)
                 {
-                    waterDistrib = false;
-                    state--;
-                    StateChanger(state, waterDistrib);
-                    NearbyStateChanger(waterDistrib);
-                    //Debug.Log("State Cube =" + state);
-                    //Debug.Log("State Cube 1=" + cube_downleft.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 2=" + cube_down.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 3=" + cube_downright.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 4=" + cube_left.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 5=" + cube_right.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 6=" + cube_topleft.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 7=" + cube_top.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 8=" + cube_topright.GetComponent<S_StateChanger>().state);
-                }
+                    int refund = 0;
+                    if (state > 0) refund += 2; 
+                    if (cube_downleft.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_down.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_downright.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_left.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_right.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_topleft.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_top.GetComponent<S_StateChanger>().state > 0) refund++;
+                    if (cube_topright.GetComponent<S_StateChanger>().state > 0) refund++;
 
-                else if (hit.transform.position == transform.position && state == 0)
-                {
-                    waterDistrib = false;
-                    NearbyStateChanger(waterDistrib);
+                    water += refund;
+                    Debug.Log("Il te reste " + water + " unités d'eau.");
+                    
+                    if (state > 0)
+                    {
+                        waterDistrib = false;
+                        state--;
+                        StateChanger(state, waterDistrib);
+                        NearbyStateChanger(waterDistrib);
+                    }
+                    else if (state == 0)
+                    {
+                        waterDistrib = false;
+                        NearbyStateChanger(waterDistrib);
+                    }
                 }
             }
         }
 
+
         else if (Input.GetMouseButtonDown(1))
         {
-            //Debug.Log(cube_downleft.GetComponent<S_StateChanger>().state);
             Ray ray = _mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.position == transform.position && state < 4)
+                if (hit.transform.position == transform.position)
                 {
-                    waterDistrib = true;
-                    state++;
-                    StateChanger(state, waterDistrib);
-                    NearbyStateChanger(waterDistrib);
-                    //Debug.Log("State Cube =" + state);
-                    //Debug.Log("State Cube 1=" + cube_downleft.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 2=" + cube_down.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 3=" + cube_downright.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 4=" + cube_left.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 5=" + cube_right.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 6=" + cube_topleft.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 7=" + cube_top.GetComponent<S_StateChanger>().state);
-                    //Debug.Log("State Cube 8=" + cube_topright.GetComponent<S_StateChanger>().state);
-                }
+                    int cost = 2;
+                    if (cube_downleft.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_down.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_downright.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_left.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_right.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_topleft.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_top.GetComponent<S_StateChanger>().state < 4) cost++;
+                    if (cube_topright.GetComponent<S_StateChanger>().state < 4) cost++;
 
-                else if (hit.transform.position == transform.position && state == 4)
-                {
-                    waterDistrib = true;
-                    NearbyStateChanger(waterDistrib);
+                    if (water < cost)
+                    {
+                        Debug.Log("Pas assez d'eau ! (" + water + " unités restantes, besoin de " + cost + ")");
+                        return;
+                    }
+
+                    water -= cost;
+                    Debug.Log("Il te reste " + water + " unités d'eau.");
+                    
+                    if (state < 4)
+                    {
+                        waterDistrib = true;
+                        state++;
+                        StateChanger(state, waterDistrib);
+                        NearbyStateChanger(waterDistrib);
+                    }
+                    else if (state == 4)
+                    {
+                        waterDistrib = true;
+                        NearbyStateChanger(waterDistrib);
+                    }
                 }
             }
         }
     }
 }
-
